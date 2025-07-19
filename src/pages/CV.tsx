@@ -151,7 +151,7 @@ const CV = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3 text-base font-bold text-white">
               <img
-                src={ASSETS.logo}
+                src={getProductionAssetUrl(ASSETS.logo)}
                 alt="Logo"
                 className="w-20 h-20 object-contain logo-rotate cursor-pointer"
                 onClick={handleNavbarLogoClick}
@@ -550,7 +550,7 @@ const CV = () => {
       <footer className="bg-black/40 py-12">
         <div className="container mx-auto px-6 text-center">
           <img
-            src={ASSETS.logo}
+            src={getProductionAssetUrl(ASSETS.logo)}
             alt="Logo"
             className="mx-auto mb-4 w-40 h-40 object-contain logo-rotate cursor-pointer"
             onClick={handleFooterLogoClick}
