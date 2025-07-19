@@ -149,29 +149,27 @@ const CV = () => {
 
       {/* Header */}
       <header className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-0">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 sm:px-6 py-0">
+          <div className="flex flex-wrap justify-between items-center">
             <div className="flex items-center gap-3 text-base font-bold text-white">
               <img
                 src={getProductionAssetUrl(ASSETS.logo)}
                 alt="Logo"
-                className="w-20 h-20 object-contain logo-rotate cursor-pointer"
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain logo-rotate cursor-pointer"
                 onClick={handleNavbarLogoClick}
               />
             </div>
-            <nav className="flex space-x-8">
-              <a href="/" className="text-white hover:text-purple-400 transition-colors" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
+            <nav className="flex flex-wrap space-x-4 sm:space-x-8">
+              <a href="/" className="text-white hover:text-purple-400 transition-colors text-sm sm:text-base" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
                 Portfolio
               </a>
               <a 
                 href="/#contact" 
-                className="text-white hover:text-purple-400 transition-colors" 
+                className="text-white hover:text-purple-400 transition-colors text-sm sm:text-base" 
                 style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}
                 onClick={(e) => {
                   e.preventDefault();
-                  // Set a flag in localStorage to indicate we want to scroll to contact
                   localStorage.setItem("scrollToContact", "true");
-                  // Navigate to portfolio page
                   window.location.href = "/";
                 }}
               >
@@ -183,21 +181,21 @@ const CV = () => {
       </header>
 
       {/* Main content */}
-      <main className="max-w-6xl mx-auto px-6 py-8">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Quick Download Section */}
-        <div className="bg-gradient-to-r from-slate-800/50 to-gray-800/50 rounded-xl p-6 mb-8 border border-white/10 backdrop-blur-sm">
+        <div className="bg-gradient-to-r from-slate-800/50 to-gray-800/50 rounded-xl p-4 sm:p-6 mb-8 border border-white/10 backdrop-blur-sm">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-white" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
+                <h2 className="text-base sm:text-lg font-semibold text-white" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
                   Professional CV
                 </h2>
-                <p className="text-gray-400 text-sm" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
+                <p className="text-gray-400 text-xs sm:text-sm" style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}>
                   Download the complete PDF version
                 </p>
               </div>
@@ -205,10 +203,10 @@ const CV = () => {
             <a
               href={ASSETS.cv}
               download
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
               style={{ fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif" }}
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Download CV
@@ -549,30 +547,30 @@ const CV = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-black/40 py-12">
-        <div className="container mx-auto px-6 text-center">
+      <footer className="bg-black/40 py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <img
             src={getProductionAssetUrl(ASSETS.logo)}
             alt="Logo"
-            className="mx-auto mb-4 w-40 h-40 object-contain logo-rotate cursor-pointer"
+            className="mx-auto mb-4 w-24 h-24 sm:w-40 sm:h-40 object-contain logo-rotate cursor-pointer"
             onClick={handleFooterLogoClick}
           />
-          <div className="text-2xl font-bold text-white mb-4">
-            <div className="flex justify-center space-x-6">
+          <div className="text-lg sm:text-2xl font-bold text-white mb-4">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <a
                 href="https://www.facebook.com/people/Enis-Buliqi/pfbid0qjWTie1LkgX4NCB5JcfWwehdCdRd5Ze3Juc85ckGoyUUyBaKh6DrnhHU8HFRHiNzl/?rdid=4APHU9subwy8TaV1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1WgubdVPK4%2F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Facebook"
               >
-                <Facebook size={24} />
+                <Facebook size={20} className="sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.behance.net/enisbuliqi1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Behance"
               >
                 <BehanceIcon />
@@ -581,23 +579,23 @@ const CV = () => {
                 href="https://www.instagram.com/enisbuliqi24/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Instagram"
               >
-                <Instagram size={24} />
+                <Instagram size={20} className="sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/enis-buliqi-044179372/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="LinkedIn"
               >
-                <Linkedin size={24} />
+                <Linkedin size={20} className="sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-gray-500">
+          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-800 text-gray-500 text-xs sm:text-base">
             © 2024 Enis Buliqi. All rights reserved.
           </div>
         </div>

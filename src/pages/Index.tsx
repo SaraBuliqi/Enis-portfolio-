@@ -172,13 +172,13 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-6 py-0">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 sm:px-6 py-0">
+          <div className="flex flex-wrap justify-between items-center">
             <div className="flex items-center gap-3 text-base font-bold text-white">
               <img
                 src={getProductionAssetUrl(ASSETS.logo)}
                 alt="Logo"
-                className="w-20 h-20 object-contain logo-rotate cursor-pointer"
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain logo-rotate cursor-pointer"
                 onClick={handleNavbarLogoClick}
                 onError={(e) => {
                   console.error('Failed to load logo:', e);
@@ -186,7 +186,7 @@ const Index = () => {
                 }}
               />
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex flex-wrap space-x-4 sm:space-x-8">
               <a
                 href="#home"
                 className={`${activeNav === "home" ? "text-purple-400" : "text-white"} hover:text-purple-400 transition-colors`}
@@ -215,13 +215,20 @@ const Index = () => {
             <Button
               asChild
               variant="outline"
-              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-base"
             >
               <a href="/cv" target="_blank" rel="noopener noreferrer">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
               </a>
             </Button>
+          </div>
+          {/* Mobile nav */}
+          <div className="flex md:hidden w-full justify-center mt-2 space-x-4 text-sm">
+            <a href="#home" className={`${activeNav === "home" ? "text-purple-400" : "text-white"} hover:text-purple-400 transition-colors`}>Home</a>
+            <a href="#work" className={`${activeNav === "work" ? "text-purple-400" : "text-white"} hover:text-purple-400 transition-colors`}>Work</a>
+            <a href="#about" className={`${activeNav === "about" ? "text-purple-400" : "text-white"} hover:text-purple-400 transition-colors`}>About</a>
+            <a href="#contact" className={`${activeNav === "contact" ? "text-purple-400" : "text-white"} hover:text-purple-400 transition-colors`}>Contact</a>
           </div>
         </div>
       </nav>
@@ -261,34 +268,34 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-black/40 py-12">
-        <div className="container mx-auto px-6 text-center">
+      <footer className="bg-black/40 py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <img
             src={getProductionAssetUrl(ASSETS.logo)}
             alt="Logo"
-            className="mx-auto mb-4 w-40 h-40 object-contain logo-rotate cursor-pointer"
+            className="mx-auto mb-4 w-24 h-24 sm:w-40 sm:h-40 object-contain logo-rotate cursor-pointer"
             onClick={handleFooterLogoClick}
             onError={(e) => {
               console.error('Failed to load footer logo:', e);
               e.currentTarget.style.display = 'none';
             }}
           />
-          <div className="text-2xl font-bold text-white mb-4">
-            <div className="flex justify-center space-x-6">
+          <div className="text-lg sm:text-2xl font-bold text-white mb-4">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <a
                 href="https://www.facebook.com/people/Enis-Buliqi/pfbid0qjWTie1LkgX4NCB5JcfWwehdCdRd5Ze3Juc85ckGoyUUyBaKh6DrnhHU8HFRHiNzl/?rdid=4APHU9subwy8TaV1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1WgubdVPK4%2F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Facebook"
               >
-                <Facebook size={24} />
+                <Facebook size={20} className="sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.behance.net/enisbuliqi1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Behance"
               >
                 <BehanceIcon />
@@ -297,23 +304,23 @@ const Index = () => {
                 href="https://www.instagram.com/enisbuliqi24/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="Instagram"
               >
-                <Instagram size={24} />
+                <Instagram size={20} className="sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/enis-buliqi-044179372/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
+                className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-gray-400 hover:text-purple-400 hover:bg-purple-600/20 hover:scale-110 hover:shadow-lg transition-all duration-200"
                 title="LinkedIn"
               >
-                <Linkedin size={24} />
+                <Linkedin size={20} className="sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-800 text-gray-500">
+          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-800 text-gray-500 text-xs sm:text-base">
             © 2024 Enis Buliqi. All rights reserved.
           </div>
         </div>
