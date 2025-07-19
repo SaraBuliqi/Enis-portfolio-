@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CV from "./pages/CV";
 
+// Force rebuild - CV routing fix
 const queryClient = new QueryClient();
 
 const App = () => (

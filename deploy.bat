@@ -1,12 +1,7 @@
 @echo off
-echo Adding all changes...
+echo Deploying to GitHub...
 git add .
-
-echo Committing changes...
-git commit -m "Fix asset loading issues - URL encode spaces and fix paths"
-
-echo Pushing to GitHub...
+git commit -m "Fix CV routing and deployment - force rebuild"
 git push
-
-echo Done! Vercel will automatically redeploy.
+echo Deployment complete!
 pause 

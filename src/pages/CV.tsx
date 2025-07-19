@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ASSETS } from '@/assets';
 
 // Force deployment update - CV page component
+// Debug: Ensure CV component loads properly
 const BehanceIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
     <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.561-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H13.96c.13 3.211 3.483 3.312 4.588 2.029h3.178zm-7.686-4h4.965c-.105-1.547-1.36-1.875-2.477-1.875-1.586 0-2.445.771-2.488 1.875zm-9.574 6.988H0V5.021h4.976c2.318 0 4.24 1.084 4.24 3.215 0 2.131-1.922 3.752-4.24 3.752zM2.977 9.609h1.897c1.134 0 1.855-.53 1.855-1.466 0-.934-.721-1.466-1.855-1.466H2.977v2.932z" />
