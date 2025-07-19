@@ -31,9 +31,5 @@
         }
       ]
     }
-  ],
-  "functions": {},
-  "static": {
-    "public": "public"
-  }
+  ]
 } 
