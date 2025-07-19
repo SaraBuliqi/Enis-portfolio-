@@ -920,7 +920,7 @@ const ProjectsSection = () => {
                     alt={project.title}
                     className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-110 bg-slate-700"
                     onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg";
+                      e.currentTarget.src = "/assets/placeholder.svg";
                     }}
                     loading="lazy"
                   />
