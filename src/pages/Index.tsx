@@ -19,7 +19,6 @@ import SkillsSection from "@/components/SkillsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import { useIsMobile } from "@/hooks/use-mobile";
-import AssetTest from "@/components/AssetTest";
 import { ASSETS, getProductionAssetUrl } from "@/assets";
 
 const BehanceIcon = () => (
@@ -171,7 +170,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <AssetTest />
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-6 py-0">
