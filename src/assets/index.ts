@@ -5,10 +5,10 @@
 // For now, we'll use the public folder approach but with better error handling
 
 export const ASSETS = {
-  logo: '/assets/enisbuliqilogo.png',
-  profile: '/assets/enisbuliqi1.jpeg',
-  cv: '/assets/EnisBuliqiResume.pdf',
-  placeholder: '/assets/placeholder.svg'
+  logo: '/enisbuliqilogo.png',
+  profile: '/enisbuliqi1.jpeg',
+  cv: '/EnisBuliqiResume.pdf',
+  placeholder: '/placeholder.svg'
 } as const;
 
 // Function to get asset URL with fallback

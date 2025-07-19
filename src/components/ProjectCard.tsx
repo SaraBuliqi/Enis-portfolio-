@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = React.memo(
             alt={`Preview image for project ${project.title}`}
             className="w-full h-72 object-contain object-center transition-transform duration-500 group-hover:scale-110"
             onError={(e) => {
-              e.currentTarget.src = "/assets/placeholder.svg";
+              e.currentTarget.src = "/placeholder.svg";
             }}
             loading="lazy"
           />

@@ -4,9 +4,9 @@ const AssetTest: React.FC = () => {
   const [assetStatus, setAssetStatus] = useState<Record<string, boolean>>({});
 
   const testAssets = [
-    '/assets/enisbuliqilogo.png',
-    '/assets/enisbuliqi1.jpeg',
-    '/assets/EnisBuliqiResume.pdf',
+    '/enisbuliqilogo.png',
+    '/enisbuliqi1.jpeg',
+    '/EnisBuliqiResume.pdf',
     '/Enis/postet/album%20covers/MASQUERADE%20ARTCOVER.jpg'
   ];
 
@@ -28,7 +28,7 @@ const AssetTest: React.FC = () => {
 
   useEffect(() => {
     testAssets.forEach(asset => {
-      if (asset === '/assets/EnisBuliqiResume.pdf') {
+      if (asset === '/EnisBuliqiResume.pdf') {
         testCV();
       } else {
         const img = new Image();
