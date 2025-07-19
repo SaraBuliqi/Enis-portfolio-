@@ -85,9 +85,11 @@ const gradientAnimation = `
 `;
 
 const CV = () => {
+  console.log("🚀 CV component is loading...");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    console.log("🎯 CV component mounted successfully");
     // Set page title
     document.title = "Enis Buliqi - CV";
     
