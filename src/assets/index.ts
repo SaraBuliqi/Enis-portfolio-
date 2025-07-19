@@ -5,9 +5,9 @@
 // For now, we'll use the public folder approach but with better error handling
 
 export const ASSETS = {
-  logo: '/enis-buliqi-logo-silver.png',
+  logo: '/enisbuliqilogo.png',
   profile: '/enisbuliqi1.jpeg',
-  cv: '/EnisBuliqi-Resume.pdf',
+  cv: '/EnisBuliqiResume.pdf',
   placeholder: '/placeholder.svg'
 } as const;
 
