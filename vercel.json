@@ -4,8 +4,8 @@
   "framework": "vite",
   "rewrites": [
     {
-      "source": "/cv",
-      "destination": "/index.html"
+      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|pdf|css|js|html))",
+      "destination": "/$1"
     },
     {
       "source": "/(.*)",
