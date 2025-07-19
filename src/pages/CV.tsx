@@ -1,10 +1,26 @@
 import React, { useEffect } from 'react';
 import { ASSETS } from '@/assets';
 
+// Add gradient animation keyframes
+const gradientAnimation = `
+  @keyframes gradient-move {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+`;
+
 const CV = () => {
   useEffect(() => {
     // Set page title
     document.title = "Enis Buliqi - CV";
+    
+    // Inject the animation styles
+    if (!document.getElementById("cv-gradient-animation")) {
+      const style = document.createElement("style");
+      style.id = "cv-gradient-animation";
+      style.innerHTML = gradientAnimation;
+      document.head.appendChild(style);
+    }
   }, []);
 
   return (
@@ -43,29 +59,32 @@ const CV = () => {
 
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-6 py-8">
-        {/* Title section */}
-        <section className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-white mb-4">
-            <span className="text-white">Enis</span>
-            <span className="text-purple-400">Buliqi</span>
-          </h1>
-          <p className="text-2xl text-gray-300 mb-6">Graphic Designer</p>
-          <a
-            href={ASSETS.cv}
-            download
-            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            Download CV
-          </a>
-        </section>
-
         {/* CV Content */}
         <section className="bg-white/5 rounded-lg overflow-hidden border border-white/10 p-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-6">Professional Summary</h2>
+            {/* Name and Title - matching portfolio style */}
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                Enis Buliqi
+              </h1>
+              <h2 
+                className="bg-gradient-to-r from-white via-white to-gray-200 bg-clip-text text-transparent text-3xl md:text-5xl lg:text-7xl font-extrabold drop-shadow-[0_0_16px_white]"
+                style={{
+                  backgroundSize: "200% 200%",
+                  animation: "gradient-move 4s ease-in-out infinite",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  textShadow: "0 0 1.5px #fff, 0 0 3px #fff",
+                  letterSpacing: "0.12em",
+                  fontFamily: "SweetSansProRegular, Sweet Sans Pro, Arial, sans-serif",
+                }}
+              >
+                Graphic Designer
+              </h2>
+            </div>
+
+            <h3 className="text-3xl font-bold text-white mb-6">Professional Summary</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               I'm a passionate 19-year-old graphic designer with expertise in creating visual solutions 
               that make brands stand out and connect with their audiences. My design philosophy centers 
