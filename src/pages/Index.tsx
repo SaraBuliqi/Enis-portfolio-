@@ -219,7 +219,7 @@ const Index = () => {
               variant="outline"
               className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
             >
-              <a href={getProductionAssetUrl(ASSETS.cv)} target="_blank" rel="noopener noreferrer">
+              <a href="/cv" target="_blank" rel="noopener noreferrer">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
               </a>

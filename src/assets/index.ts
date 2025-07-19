@@ -7,7 +7,7 @@
 export const ASSETS = {
   logo: '/enis-buliqi-logo-silver.png',
   profile: '/enisbuliqi1.jpeg',
-  cv: '/cv.html',
+  cv: '/EnisBuliqi-Resume.pdf',
   placeholder: '/placeholder.svg'
 } as const;
 
