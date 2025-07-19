@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { ASSETS } from '@/assets';
+import { ASSETS, getProductionAssetUrl } from '@/assets';
 
 // Force deployment update - CV page component
 // Debug: Ensure CV component loads properly
