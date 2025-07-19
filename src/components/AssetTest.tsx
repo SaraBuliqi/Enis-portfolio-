@@ -6,29 +6,29 @@ const AssetTest: React.FC = () => {
   const testAssets = [
     '/enis-buliqi-logo-silver.png',
     '/enisbuliqi1.jpeg',
-    '/cv.html',
+    '/EnisBuliqi-Resume.pdf',
     '/Enis/postet/album%20covers/MASQUERADE%20ARTCOVER.jpg'
   ];
 
   const testCV = async () => {
     try {
-      const response = await fetch('/cv.html');
+      const response = await fetch('/cv');
       if (response.ok) {
         console.log('✅ CV page loads successfully');
-        setAssetStatus(prev => ({ ...prev, '/cv.html': true }));
+        setAssetStatus(prev => ({ ...prev, '/cv': true }));
       } else {
         console.error('❌ CV page failed to load:', response.status);
-        setAssetStatus(prev => ({ ...prev, '/cv.html': false }));
+        setAssetStatus(prev => ({ ...prev, '/cv': false }));
       }
     } catch (error) {
       console.error('❌ CV page error:', error);
-      setAssetStatus(prev => ({ ...prev, '/cv.html': false }));
+      setAssetStatus(prev => ({ ...prev, '/cv': false }));
     }
   };
 
   useEffect(() => {
     testAssets.forEach(asset => {
-      if (asset === '/cv.html') {
+      if (asset === '/EnisBuliqi-Resume.pdf') {
         testCV();
       } else {
         const img = new Image();

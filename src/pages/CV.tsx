@@ -62,14 +62,73 @@ const CV = () => {
           </a>
         </section>
 
-        {/* PDF viewer */}
-        <section className="bg-white/5 rounded-lg overflow-hidden border border-white/10">
-          <div className="h-[800px] w-full">
-            <iframe
-              src={ASSETS.cv}
-              className="w-full h-full"
-              title="Enis Buliqi CV"
-            />
+        {/* CV Content */}
+        <section className="bg-white/5 rounded-lg overflow-hidden border border-white/10 p-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-6">Professional Summary</h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              I'm a passionate 19-year-old graphic designer with expertise in creating visual solutions 
+              that make brands stand out and connect with their audiences. My design philosophy centers 
+              around the belief that great design should not only look beautiful but also solve problems 
+              and tell compelling stories.
+            </p>
+            
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Experience</h3>
+            <div className="mb-6">
+              <div className="bg-white/5 p-4 rounded-lg mb-4">
+                <h4 className="text-xl font-semibold text-white">Sharp Group L.L.C.</h4>
+                <p className="text-gray-400">Graphic Designer</p>
+                <p className="text-gray-500 text-sm">Previous role</p>
+              </div>
+              <div className="bg-white/5 p-4 rounded-lg">
+                <h4 className="text-xl font-semibold text-white">Freelance Designer</h4>
+                <p className="text-gray-400">Current position</p>
+                <p className="text-gray-500 text-sm">Working with various clients</p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Skills</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Adobe Photoshop</span>
+              </div>
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Adobe Illustrator</span>
+              </div>
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Brand Identity</span>
+              </div>
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Social Media Design</span>
+              </div>
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Print Design</span>
+              </div>
+              <div className="bg-white/5 p-3 rounded-lg text-center">
+                <span className="text-white font-medium">Campaign Design</span>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-purple-400 mb-4">Achievements</h3>
+            <ul className="text-gray-300 space-y-2 mb-6">
+              <li>• Completed 300+ projects for various clients</li>
+              <li>• Worked with 25+ satisfied clients</li>
+              <li>• Specialized in brand identity and social media design</li>
+              <li>• Experience in album covers, banners, and marketing campaigns</li>
+            </ul>
+
+            <div className="text-center">
+              <a
+                href={ASSETS.cv}
+                download
+                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg transition-colors text-lg font-medium"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Full CV (PDF)
+              </a>
+            </div>
           </div>
         </section>
       </main>
