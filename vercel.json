@@ -4,6 +4,10 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/cv.html",
+      "destination": "/cv.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -19,7 +23,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|pdf|css|js))",
+      "source": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|pdf|css|js|html))",
       "headers": [
         {
           "key": "Cache-Control",
@@ -27,5 +31,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  }
 } 

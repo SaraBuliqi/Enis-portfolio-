@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Coffee, Heart, Users } from "lucide-react";
+import { ASSETS, getProductionAssetUrl } from "@/assets";
 
 const AboutSection = () => {
   return (
@@ -14,9 +15,13 @@ const AboutSection = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/enisbuliqi1.jpeg"
+                src={getProductionAssetUrl(ASSETS.profile)}
                 alt="Enis Buliqi"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+                onError={(e) => {
+                  console.error('Failed to load profile image:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
 

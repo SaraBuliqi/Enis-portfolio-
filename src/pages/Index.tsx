@@ -19,6 +19,8 @@ import SkillsSection from "@/components/SkillsSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import { useIsMobile } from "@/hooks/use-mobile";
+import AssetTest from "@/components/AssetTest";
+import { ASSETS, getProductionAssetUrl } from "@/assets";
 
 const BehanceIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -169,16 +171,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <AssetTest />
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-6 py-0">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3 text-base font-bold text-white">
               <img
-                src="/enis-buliqi-logo-silver.png"
+                src={getProductionAssetUrl(ASSETS.logo)}
                 alt="Logo"
                 className="w-20 h-20 object-contain logo-rotate cursor-pointer"
                 onClick={handleNavbarLogoClick}
+                onError={(e) => {
+                  console.error('Failed to load logo:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
             <div className="hidden md:flex space-x-8">
@@ -212,7 +219,7 @@ const Index = () => {
               variant="outline"
               className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
             >
-              <a href="/cv.html" target="_blank" rel="noopener noreferrer">
+              <a href={getProductionAssetUrl(ASSETS.cv)} target="_blank" rel="noopener noreferrer">
                 <Download className="w-4 h-4 mr-2" />
                 Resume
               </a>
@@ -259,10 +266,14 @@ const Index = () => {
       <footer className="bg-black/40 py-12">
         <div className="container mx-auto px-6 text-center">
           <img
-            src="/enis-buliqi-logo-silver.png"
+            src={getProductionAssetUrl(ASSETS.logo)}
             alt="Logo"
             className="mx-auto mb-4 w-40 h-40 object-contain logo-rotate cursor-pointer"
             onClick={handleFooterLogoClick}
+            onError={(e) => {
+              console.error('Failed to load footer logo:', e);
+              e.currentTarget.style.display = 'none';
+            }}
           />
           <div className="text-2xl font-bold text-white mb-4">
             <div className="flex justify-center space-x-6">
